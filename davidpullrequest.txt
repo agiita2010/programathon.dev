@@ -1,5 +1,1 @@
-<<<<<<< HEAD
-Érase una vez... 
-=======
 Hola Davvid!!!!!!
->>>>>>> master
