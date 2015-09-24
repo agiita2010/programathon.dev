@@ -1,9 +1,16 @@
-var pruebaModel = Stapes.subclass({
+var PruebaModel = Stapes.subclass({
     constructor : function() {
-        this.name = "Sancho";
+        if(window.localStorage.todos) {
+           var all = JSON.parse(window.localStorage.all);
+           set(all);
+       }
     },
 
-    getName : function() {
-        return this.name;
+    save : function() {
+        window.localStorage.all = JSON.stringify(this.getAll());
+    },
+
+    getName : function(){
+      return 'Sancho'
     }
 });

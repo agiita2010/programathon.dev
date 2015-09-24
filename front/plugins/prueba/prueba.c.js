@@ -1,9 +1,12 @@
-var Module = Stapes.subclass({
-    constructor : function(name) {
-        this.name = name;
+var PruebaController = HelperController.subclass({
+    constructor : function(el) {
+      this.appendView(el, '/front/plugins/prueba/prueba.v.html')
+      this.model = new PruebaModel();
+        this.writeName();
     },
 
-    sayName : function() {
-        console.log('My name is: ' + this.name);
+
+    writeName : function() {
+       $('#data').val(this.model.getName());
     }
 });
